@@ -1,3 +1,5 @@
+use crate::prob::Prob;
+
 #[derive(Debug)]
 pub struct Individu {
     dna: Vec<i8>,
@@ -43,7 +45,17 @@ impl Individu {
     }
 
     pub fn mutation(&mut self) {
-        if rand::random() {
+        if Prob::probability(10) {
+            let index = rand::random::<usize>() % self.dna.len();
+            self.dna.insert(index, if rand::random() { 1 } else { 0 });
+        }
+
+        if Prob::probability(10) {
+            let index = rand::random::<usize>() % self.dna.len();
+            self.dna.remove(index);
+        }
+
+        if Prob::probability(10) {
             let index = rand::random::<usize>() % self.dna.len();
             self.dna[index] = 1 - self.dna[index];
         }
