@@ -41,4 +41,11 @@ impl Individu {
 
         return distance as f64 / half_dna as f64; // Devrait être entre 0 et 1
     }
+
+    pub fn mutation(&mut self) {
+        if rand::random() {
+            let index = rand::random::<usize>() % self.dna.len();
+            self.dna[index] = 1 - self.dna[index];
+        }
+    }
 }
