@@ -1,5 +1,6 @@
 mod monde;
 mod individu;
+mod prob;
 
 use getopts::Options;
 use monde::Monde;
