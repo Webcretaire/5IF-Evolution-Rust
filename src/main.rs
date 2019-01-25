@@ -31,7 +31,7 @@ fn main() {
     let iterations = get_i64_opt(&matches, "i", 0);
 
     let mut monde = Monde::new(nombre_initial, taille_initiale);
-//    println!("{:#?}", f);
+//    println!("{:#?}", monde);
     monde.affichage(true);
 
     for i in 0..iterations {
@@ -49,5 +49,4 @@ fn main() {
     println!();
 
     monde.affichage(true);
-//    println!("{:#?}", f);
 }

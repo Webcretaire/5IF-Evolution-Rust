@@ -1,10 +1,7 @@
 use crate::individu::Individu;
 
-#[derive(Debug)]
 pub struct Monde {
     nombre_reproduction: i64,
-    temps_meilleur: i64,
-    nombre_mutations_meilleur: i64,
     individus: Vec<Individu>,
 }
 
@@ -18,8 +15,6 @@ impl Monde {
     pub fn new(nb_initial: i64, taille_initiale: i64) -> Monde {
         let mut monde = Monde {
             nombre_reproduction: 0,
-            temps_meilleur: -1,
-            nombre_mutations_meilleur: -1,
             individus: Vec::new(),
         };
 
