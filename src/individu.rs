@@ -1,3 +1,5 @@
+use crate::prob::Prob;
+
 pub struct Individu {
     dna: Vec<i8>,
 }
